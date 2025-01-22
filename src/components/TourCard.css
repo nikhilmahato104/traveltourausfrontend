@@ -1,0 +1,364 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Shared Styles */
+.tour-card, .booking-form-container {
+  transition: all 0.3s ease; /* For smooth transition effects */
+}
+
+.tour-card {
+  position: relative;
+  width: 320px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+
+.tour-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .tour-name {
+  color: #ffffff;
+}
+
+body.dark-mode .tour-price {
+  color: #fa8500;
+}
+
+/* Tour Name Styling */
+.tour-name {
+  position: relative;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  z-index: 2;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  max-width: 100%;
+  font-family: cursive;
+}
+
+/* Tour Image Styling */
+.tour-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Tour Details Styling */
+.tour-details {
+  padding: 0 16px;
+  text-align: center;
+}
+
+.tour-description {
+  font-size: 1rem;
+  color: #666666;
+  margin: 0;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+body.dark-mode .tour-description {
+  color: #000000;
+}
+
+/* Map Container */
+.map-container {
+  width: 100%;
+  height: 200px;
+  margin: 16px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Footer Section */
+.tour-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.tour-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fa8500;
+}
+
+.tour-price span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+body.dark-mode .tour-price {
+  color: #fa8500;
+}
+
+/* Book Now Button */
+.book-now-btn {
+  padding: 8px 16px;
+  background-color: #fa8500;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.book-now-btn:hover {
+  background-color: #6b2cb7;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-now-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .book-now-btn {
+  background-color: #fa8500;
+  color: #ffffff;
+}
+
+body.dark-mode .book-now-btn:hover {
+  background-color: #6b2cb7;
+}
+
+/* Blur Effect when the form is open */
+.tour-card.blurred {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+/* Booking Form Overlay */
+.booking-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's on top */
+}
+
+/* Booking Form Container */
+.booking-form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close-form-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Form Input Fields */
+.booking-form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Submit Button in Booking Form */
+.booking-form-container button {
+  padding: 10px;
+  background-color: #fa8500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.booking-form-container button:hover {
+  background-color: #6b2cb7;
+}
+
+/* Loader Styling */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #fa8500;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tour-card {
+    width: 90%;
+  }
+
+  .booking-form-container {
+    width: 100%;
+  }
+}
+
+/* Booking Form Container */
+.booking-form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close-form-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Form Input Fields */
+.booking-form-container input,
+.booking-form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form-container button {
+  padding: 10px;
+  background-color: #fa8500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.booking-form-container button:hover {
+  background-color: #6b2cb7;
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Number of Members Control */
+.members-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.members-control button {
+  padding: 5px 10px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.members-control input {
+  width: 40px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+/* Confirm Booking Button */
+.confirm-booking-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #fa8500;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.confirm-booking-btn:hover {
+  background-color: #6b2cb7;
+}
+
+/* Dynamic Styling */
+
+
+.tour-card.blurred {
+  filter: blur(4px);
+}
+
+.loader {
+  border: 4px solid #f3f3f3; 
+  border-top: 4px solid #fa8500; 
+  border-radius: 50%; 
+  width: 20px; 
+  height: 20px; 
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Tour Name Display after the Confirmation Header */
+.tour-confirmation-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fa8500;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+

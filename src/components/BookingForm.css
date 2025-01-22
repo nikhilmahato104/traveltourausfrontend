@@ -1,0 +1,180 @@
+/* General Styles */
+body {
+    background-color: #ffffff; /* Light background */
+  color: #333; /* Light text color */
+  font-family: Arial, sans-serif;
+}
+.booking-form-container h3 span {
+    color: orange;
+    font-family: sans-serif;
+    text-decoration: underline;
+    text-decoration-style:dotted;
+  }
+  
+  
+  
+
+/* Booking Form Overlay */
+.booking-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the form is above other content */
+}
+
+/* Booking Form Container */
+.booking-form-container {
+  background: white; /* White background for light mode */
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #100f27; /* Dark background */
+  color: #fff; /* White text */
+}
+
+body.dark-mode .booking-form-container {
+  background-color:rgba(28, 26, 26, 0.8);; /* Dark form background */
+  color: #fff; /* White text for form */
+  border: 1px solid or;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* White shadow */
+
+}
+
+body.dark-mode .booking-form-container input,
+body.dark-mode .booking-form-container select {
+  background-color: #000000; /* Darker input background */
+  color: #ffffff; /* White text inside input */
+  border: 1px solid #777; /* Lighter border for dark mode */
+}
+
+body.dark-mode .confirm-booking-btn {
+  background-color: #fa8500; ; /* Purple color for confirm button in dark mode */
+}
+
+body.dark-mode .confirm-booking-btn:hover {
+  background-color: #fa8500; /* Change to orange on hover */
+}
+
+body.dark-mode .close-form-btn {
+  color: #ffffff; /* Close button color */
+}
+
+/* Light Mode Styles (default) */
+body .booking-form-container {
+  background: white; /* Light background for form */
+  color: #333; /* Dark text for form */
+}
+
+body .booking-form-container input,
+body .booking-form-container select {
+  background-color: #fff; /* Light input background */
+  color: #333; /* Dark text inside input */
+  border: 1px solid #ccc; /* Standard light border */
+}
+
+body .confirm-booking-btn {
+  background-color: #fa8500; /* Orange color for confirm button in light mode */
+}
+
+body .confirm-booking-btn:hover {
+  background-color: #6b2cb7; /* Purple color on hover */
+}
+
+body .close-form-btn {
+  color: #fa8500; /* Close button color */
+}
+
+/* Close Button */
+.close-form-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fa8500;
+  font-weight: bold;
+}
+
+/* Form Input Fields */
+.booking-form-container input,
+.booking-form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Labels for Inputs */
+.booking-form-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Telephone Section */
+.telephone-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.telephone-container select {
+  width: 30%;
+  margin-right: 5px;
+}
+
+.telephone-container input {
+  width: 65%; /* Adjust input field to fit the layout */
+}
+
+/* Confirm Booking Button */
+.confirm-booking-btn {
+  padding: 12px;
+  background-color: #fa8500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.confirm-booking-btn:hover {
+  background-color: #6b2cb7; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-form-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .confirm-booking-btn {
+    font-size: 0.9rem;
+    padding: 0px;
+  }
+  
+  .telephone-container .country-code{
+    width: 30%;
+    font-size:smaller;
+  }
+}

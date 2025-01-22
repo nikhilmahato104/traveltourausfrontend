@@ -1,0 +1,199 @@
+/* Default Carousel Styles */
+.carousel {
+  position: relative;
+  width: 100%; /* Full-width */
+  height: 70vh; /* Default height */
+  overflow: hidden; /* Hide parts outside the container */
+  background-color: #f0f0f0; /* Fallback background in case images don't load */
+  margin: 61px 0 0 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better depth */
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)); /* Dark gradient at the bottom for better visibility of text */
+}
+
+/* Carousel Images Container */
+.carousel-images {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: 100%;
+  height: 100%;
+  
+}
+
+/* Individual Carousel Item */
+.carousel-item {
+  flex: 0 0 100%; /* Full width for each image */
+  height: 100%;
+  position: relative; /* Allow the overlay to be positioned within the item */
+}
+
+/* Image Styling */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85); /* Darken images for better contrast */
+  transition: filter 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Dark Gradient Overlay */
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  pointer-events: none; /* Allow interaction with underlying content */
+}
+
+/* Hover Effect on Image */
+.carousel-item:hover img {
+  filter: brightness(1); /* Lighten image on hover */
+}
+
+/* Navigation Controls */
+.carousel-controls {
+  position: absolute;
+  top: 50%; /* Vertically center */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent controls from interfering with image clicks */
+  z-index: 10;
+}
+
+.carousel-controls button{
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  /* height: 10px; */
+  color: white;
+  font-size: 1.5rem; /* Increase size for better visibility */
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 0px 10px 10px 0px; /* Make the button fully round */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow for buttons */
+  background: radial-gradient(circle, rgba(1, 1, 0.1, 0.1), rgba(0, 0, 0, 0.3));
+}
+#second{
+   /* Radial gradient for depth */
+   border-radius: 10px 0px 0px 10px; 
+}
+
+.carousel-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.15); /* Slightly larger scale effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Deepened shadow on hover */
+  transition: all 0.4s ease; /* Smooth scaling */
+}
+
+/* Pagination Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.carousel-dots button {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Light shadow for dots */
+}
+
+.carousel-dots button.active {
+  background-color: #ffffff;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Larger shadow for active dot */
+}
+
+.carousel-dots button:hover {
+  background-color: #cccccc;
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3); /* Hover shadow effect */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .carousel {
+    height: 25vh; /* Reduce height for mobile */
+  }
+  .carousel-controls button {
+    font-size: 1.8rem; /* Smaller control size on mobile */
+    padding: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .carousel {
+    height: 30vh; /* Adjust height for medium devices */
+  }
+}
+
+@media (min-width: 769px) {
+  .carousel {
+    height: 60vh;/* Adjust height for larger screens */
+  }
+}
+/* scroll behaviour */
+/* Carousel Images Container */
+.carousel-images {
+  display: flex;
+  transition: transform 0.3s ease-out; /* Smooth transition after dragging */
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.carousel-item {
+  flex: 0 0 100%; /* Full width for each image */
+  height: 100%;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+/* Other styles remain unchanged */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* src/components/Slider.css */
+
+
+
+/* Ensure the images and carousel stay at full height */
+
+
+/* Center the search bar and get started button */
