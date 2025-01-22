@@ -1,18 +1,15 @@
 /* General Styles */
 body {
-    background-color: #ffffff; /* Light background */
+  background-color: #ffffff; /* Light background */
   color: #333; /* Light text color */
   font-family: Arial, sans-serif;
 }
 .booking-form-container h3 span {
-    color: orange;
-    font-family: sans-serif;
-    text-decoration: underline;
-    text-decoration-style:dotted;
-  }
-  
-  
-  
+  color: orange;
+  font-family: sans-serif;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
 
 /* Booking Form Overlay */
 .booking-form-overlay {
@@ -47,11 +44,10 @@ body.dark-mode {
 }
 
 body.dark-mode .booking-form-container {
-  background-color:rgba(28, 26, 26, 0.8);; /* Dark form background */
+  background-color: rgba(28, 26, 26, 0.8); /* Dark form background */
   color: #fff; /* White text for form */
   border: 1px solid or;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* White shadow */
-
 }
 
 body.dark-mode .booking-form-container input,
@@ -62,7 +58,7 @@ body.dark-mode .booking-form-container select {
 }
 
 body.dark-mode .confirm-booking-btn {
-  background-color: #fa8500; ; /* Purple color for confirm button in dark mode */
+  background-color: #fa8500; /* Purple color for confirm button in dark mode */
 }
 
 body.dark-mode .confirm-booking-btn:hover {
@@ -161,6 +157,123 @@ body .close-form-btn {
   background-color: #6b2cb7; /* Change color on hover */
 }
 
+/* Loader Button - Centered large button */
+.loading-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #fa8500;
+  border: none;
+  border-radius: 4px;
+  cursor: not-allowed;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Booking Success Styling */
+/* Booking Success Popup */
+.booking-success {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #fdfdfd, #f5f5f5);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Success Heading */
+.booking-success h3 {
+  font-size: 1.5rem;
+  color: #28a745; /* Success green color */
+  margin-bottom: 15px;
+}
+
+/* Success Description */
+.booking-success p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Payment Buttons Container */
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* Payment Buttons */
+.payment-option-btn {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #ff8c00, #ffa500);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  flex: 1; /* Make buttons equal in width */
+  text-align: center;
+}
+
+.payment-option-btn:hover {
+  background: linear-gradient(135deg, #ffa500, #ff8c00);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 140, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .payment-option-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .booking-form-container {
@@ -172,9 +285,131 @@ body .close-form-btn {
     font-size: 0.9rem;
     padding: 0px;
   }
-  
-  .telephone-container .country-code{
+
+  .telephone-container .country-code {
     width: 30%;
-    font-size:smaller;
+    font-size: smaller;
   }
+}
+
+
+
+
+
+/* Progress Bar Container */
+.progress-bar-container {
+  width: 100%;
+  height: 24px;
+  background: linear-gradient(90deg, #eee, #ddd);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 8px; /* Add some space for better alignment */
+}
+
+/* Progress Bar Fill */
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #14f10c, #ffa500, #88e113);
+  background-size: 200% 100%; /* For gradient animation */
+  width: 0;
+  animation: fillProgress 2s ease-in-out forwards, shine 1.5s infinite;
+  border-radius: 6px; /* Smooth edges */
+  box-shadow: 0 0 8px rgba(255, 140, 0, 0.6), 0 0 15px rgba(255, 165, 0, 0.4); /* Glow effect */
+}
+
+/* Smooth Fill Animation */
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Gradient Shine Animation */
+@keyframes shine {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+/* Optional: Progress Button Enhancements */
+.confirm-booking-btn {
+  padding: 12px;
+  background-color: #fa8500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.confirm-booking-btn.progress-active {
+  background-color: #f59c42; /* Lighter orange during progress */
+}
+
+/* Custom Message Div */
+.custom-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white; /* Adjust to match your website's theme */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+  color: #333;
+}
+
+.custom-message h4 {
+  color: #fa8500; /* Match your website's primary color */
+  margin-bottom: 10px;
+}
+
+.custom-message p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.close-message-btn {
+  background-color: #fa8500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.close-message-btn:hover {
+  background-color: #d57d00;
+}
+
+/* Payment Buttons */
+.payment-option-btn {
+  padding: 10px 20px;
+  background-color: #fa8500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.payment-option-btn:hover {
+  background-color: #d57d00;
 }
