@@ -53,9 +53,11 @@ body.dark-mode .tour-price {
 /* Tour Image Styling */
 .tour-image {
   width: 100%;
-  height: 220px;
+  height: 210px;
   object-fit: cover;
   border-bottom: 1px solid #e0e0e0;
+  border-radius: 10px 10px 0px 0px;
+  margin-top: 15px;
 }
 
 /* Tour Details Styling */
@@ -362,3 +364,51 @@ body.dark-mode .book-now-btn:hover {
 }
 
 
+/* Skeleton Loader Styles */
+.skeleton {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Skeleton Card */
+.skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Skeleton image placeholder */
+.skeleton-image {
+  width: 100%;
+  height: 200px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  animation: skeleton-loading 1.5s infinite linear;
+}
+
+/* Skeleton text placeholder */
+.skeleton-text {
+  height: 20px;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  animation: skeleton-loading 1.5s infinite linear;
+}
+
+/* Skeleton effect animation */
+@keyframes skeleton-loading {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #d0d0d0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
