@@ -1,0 +1,24 @@
+.company-location {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .company-location h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .company-location p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .map-container-company {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 90%; /* Control max width */
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

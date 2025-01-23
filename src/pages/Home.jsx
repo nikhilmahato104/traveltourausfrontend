@@ -1,4 +1,3 @@
-// // src/pages/Home.jsx
 // import React from "react";
 // import Navbar from "../components/Navbar.jsx";
 // import Slider from "../components/Slider.jsx";
@@ -9,7 +8,7 @@
 //   return (
 //     <>
 //       <Navbar />
-//       <Slider />
+//       <Slider /> {/* Slider includes Search Bar and Get Started Button */}
 //       <Heading />
 //       <TourCardList />
 //     </>
@@ -17,40 +16,18 @@
 // };
 
 // export default Home;
-// src/pages/Home.jsx
-// import React from "react";
-// import Navbar from "../components/Navbar.jsx";
-// import Slider from "../components/Slider.jsx";
-// import Heading from "../components/Heading.jsx";
-// import TourCardList from "../components/TourCardList.jsx";
-// import SearchBar from "../components/SearchBar.jsx"; // Import SearchBar
-// import GetStartedButton from "../components/GetStartedButton.jsx"; // Import GetStartedButton
 
-// const Home = () => {
-//   return (
-//     <>
-//       <Navbar />
-//       <Slider>
-//         {/* Centered Content (Search Bar + Get Started Button) */}
-//         <div className="center-content">
-//           <SearchBar />
-//           <GetStartedButton />
-//         </div>
-//       </Slider>
-//       <Heading />
-//       <TourCardList />
-//     </>
-//   );
-// };
 
-// export default Home;
-// src/pages/Home.jsx
+
+
+
 import React from "react";
 import Navbar from "../components/Navbar.jsx";
 import Slider from "../components/Slider.jsx";
 import Heading from "../components/Heading.jsx";
 import TourCardList from "../components/TourCardList.jsx";
-
+import Divider from "../components/Divider.jsx"; // Import the Divider component
+import MyCompanyLocation from "../components/MyCompanyLocation.jsx";
 const Home = () => {
   return (
     <>
@@ -58,6 +35,18 @@ const Home = () => {
       <Slider /> {/* Slider includes Search Bar and Get Started Button */}
       <Heading />
       <TourCardList />
+      
+      {/* Use the Divider component here */}
+      <Divider />
+      <div>
+      <MyCompanyLocation
+        locationName="My Company"
+        locationAddress="123 Business St, City, Country"
+        lat="37.7749" // Example Latitude
+        long="-122.4194" // Example Longitude (San Francisco)
+      />
+    </div>
+    <Divider />
     </>
   );
 };

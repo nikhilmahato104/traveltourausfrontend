@@ -30,8 +30,8 @@ body {
   background: white; /* White background for light mode */
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
-  max-width: 400px;
+  width: 91%;
+  max-width: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
@@ -311,7 +311,7 @@ body .close-form-btn {
 /* Progress Bar Fill */
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #14f10c, #ffa500, #88e113);
+  background: linear-gradient(90deg, #28f005, #ffa500, #2cb733);
   background-size: 200% 100%; /* For gradient animation */
   width: 0;
   animation: fillProgress 2s ease-in-out forwards, shine 1.5s infinite;
@@ -355,7 +355,7 @@ body .close-form-btn {
 }
 
 .confirm-booking-btn.progress-active {
-  background-color: #f59c42; /* Lighter orange during progress */
+  background-color:  #6b2cb7; /* Lighter orange during progress */
 }
 
 /* Custom Message Div */

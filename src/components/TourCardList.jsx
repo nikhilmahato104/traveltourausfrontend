@@ -13,7 +13,7 @@ const TourCardList = () => {
   const dummyTours = [
     {
       id: 1,
-      name: "Maithon Dam",
+      name: "Maithon Damm",
       description: "Experience the iconic architecture and culture of Sydney.",
       image: slider4,
       location: "Warangle, India",
