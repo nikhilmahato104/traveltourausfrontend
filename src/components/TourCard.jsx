@@ -38,7 +38,7 @@ const TourCard = ({ name, description, image, location, price, startPoint, endPo
   };
 
   return (
-    <div>
+    <div className="big-tour-div">
       {/* Tour card with dynamic classes for blur and color */}
       <div className={`tour-card ${isCardBlue ? "blue" : ""}`}>
         {showSkeleton ? (
@@ -90,3 +90,4 @@ const TourCard = ({ name, description, image, location, price, startPoint, endPo
 };
 
 export default TourCard;
+

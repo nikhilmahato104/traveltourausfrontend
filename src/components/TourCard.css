@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
 }
 
 /* Shared Styles */
@@ -12,6 +11,7 @@
   transition: all 0.3s ease; /* For smooth transition effects */
 }
 
+/* Tour Card */
 .tour-card {
   position: relative;
   width: 320px;
@@ -21,20 +21,30 @@
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
-
 }
-
 .tour-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
-
-body.dark-mode .tour-name {
-  color: #ffffff;
+.tour-card.blurred {
+  filter: blur(4px);
+  pointer-events: none;
 }
 
+/* Dark Mode Adjustments */
+body.dark-mode .tour-name,
 body.dark-mode .tour-price {
-  color: #fa8500;
+  color: #ffffff;
+}
+body.dark-mode .tour-description {
+  color: #000000;
+}
+body.dark-mode .book-now-btn {
+  background-color: #fa8500;
+  color: #ffffff;
+}
+body.dark-mode .book-now-btn:hover {
+  background-color: #6b2cb7;
 }
 
 /* Tour Name Styling */
@@ -68,7 +78,6 @@ body.dark-mode .tour-price {
   padding: 0 16px;
   text-align: center;
 }
-
 .tour-description {
   font-size: 1rem;
   color: #666666;
@@ -77,21 +86,15 @@ body.dark-mode .tour-price {
   overflow-wrap: break-word;
 }
 
-body.dark-mode .tour-description {
-  color: #000000;
-}
-
 /* Map Container */
 .map-container {
   width: 100%;
-  height: 200px;
   margin: 16px 0;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
   height: 30vh;
 }
-
 iframe {
   width: 100%;
   height: 100%;
@@ -106,29 +109,22 @@ iframe {
   padding: 8px 16px;
   border-top: 1px solid #e0e0e0;
 }
-
 .tour-price {
   font-size: 1rem;
   font-weight: bold;
   color: #fa8500;
 }
-
 .tour-price span {
-  font-size: 1rem;
-  font-weight: bold;
   color: #000000;
 }
 
-body.dark-mode .tour-price {
-  color: #fa8500;
-}
-
 /* Book Now Button */
-.book-now-btn {
+.book-now-btn,
+.booking-form-container button,
+.confirm-booking-btn {
   padding: 8px 16px;
   background-color: #fa8500;
   color: #ffffff;
-  font-size: 0.9rem;
   font-weight: bold;
   border: none;
   border-radius: 8px;
@@ -136,30 +132,17 @@ body.dark-mode .tour-price {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.2s ease;
 }
-
-.book-now-btn:hover {
+.book-now-btn:hover,
+.booking-form-container button:hover,
+.confirm-booking-btn:hover {
   background-color: #6b2cb7;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
-
-.book-now-btn:active {
+.book-now-btn:active,
+.booking-form-container button:active,
+.confirm-booking-btn:active {
   transform: scale(0.98);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-body.dark-mode .book-now-btn {
-  background-color: #fa8500;
-  color: #ffffff;
-}
-
-body.dark-mode .book-now-btn:hover {
-  background-color: #6b2cb7;
-}
-
-/* Blur Effect when the form is open */
-.tour-card.blurred {
-  filter: blur(4px);
-  pointer-events: none;
 }
 
 /* Booking Form Overlay */
@@ -186,7 +169,16 @@ body.dark-mode .book-now-btn:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
+.booking-form-container input,
+.booking-form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
+/* Close Button in Booking Form */
 .close-form-btn {
   position: absolute;
   top: 10px;
@@ -195,30 +187,6 @@ body.dark-mode .book-now-btn:hover {
   background: none;
   border: none;
   cursor: pointer;
-}
-
-/* Form Input Fields */
-.booking-form-container input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Submit Button in Booking Form */
-.booking-form-container button {
-  padding: 10px;
-  background-color: #fa8500;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.booking-form-container button:hover {
-  background-color: #6b2cb7;
 }
 
 /* Loader Styling */
@@ -230,7 +198,6 @@ body.dark-mode .book-now-btn:hover {
   height: 20px;
   animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -241,132 +208,10 @@ body.dark-mode .book-now-btn:hover {
   .tour-card {
     width: 90%;
   }
-
   .booking-form-container {
     width: 100%;
   }
 }
-
-/* Booking Form Container */
-.booking-form-container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-.close-form-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Form Input Fields */
-.booking-form-container input,
-.booking-form-container select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.booking-form-container button {
-  padding: 10px;
-  background-color: #fa8500;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.booking-form-container button:hover {
-  background-color: #6b2cb7;
-}
-
-/* Error Message */
-.error {
-  color: red;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-/* Number of Members Control */
-.members-control {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.members-control button {
-  padding: 5px 10px;
-  background-color: #ddd;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-.members-control input {
-  width: 40px;
-  text-align: center;
-  margin: 0 10px;
-}
-
-/* Confirm Booking Button */
-.confirm-booking-btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #fa8500;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
-.confirm-booking-btn:hover {
-  background-color: #6b2cb7;
-}
-
-/* Dynamic Styling */
-
-
-.tour-card.blurred {
-  filter: blur(4px);
-}
-
-.loader {
-  border: 4px solid #f3f3f3; 
-  border-top: 4px solid #fa8500; 
-  border-radius: 50%; 
-  width: 20px; 
-  height: 20px; 
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-/* Tour Name Display after the Confirmation Header */
-.tour-confirmation-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fa8500;
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
 
 /* Skeleton Loader Styles */
 .skeleton {
@@ -378,41 +223,55 @@ body.dark-mode .book-now-btn:hover {
   height: 100%;
   position: relative;
 }
-
-/* Skeleton Card */
 .skeleton-card {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
-/* Skeleton image placeholder */
-.skeleton-image {
-  width: 100%;
-  height: 200px;
+.skeleton-image,
+.skeleton-text {
   background-color: #e0e0e0;
   border-radius: 10px;
   animation: skeleton-loading 1.5s infinite linear;
 }
-
-/* Skeleton text placeholder */
+.skeleton-image {
+  height: 200px;
+}
 .skeleton-text {
   height: 20px;
   width: 100%;
-  background-color: #e0e0e0;
-  border-radius: 4px;
-  animation: skeleton-loading 1.5s infinite linear;
+}
+@keyframes skeleton-loading {
+  0% { background-color: #e0e0e0; }
+  50% { background-color: #d0d0d0; }
+  100% { background-color: #e0e0e0; }
 }
 
-/* Skeleton effect animation */
-@keyframes skeleton-loading {
-  0% {
-    background-color: #e0e0e0;
-  }
-  50% {
-    background-color: #d0d0d0;
-  }
-  100% {
-    background-color: #e0e0e0;
-  }
+/* Additional Styles */
+.tour-confirmation-name {
+  font-size: 1.2rem;
+  color: #fa8500;
+  margin-top: 10px;
+}
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.members-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.members-control button {
+  padding: 5px 10px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.members-control input {
+  width: 40px;
+  text-align: center;
+  margin: 0 10px;
 }

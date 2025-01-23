@@ -25,7 +25,7 @@ body {
   z-index: 9999; /* Ensure the form is above other content */
 }
 
-/* Booking Form Container */
+/* Booking Form Containerd */
 .booking-form-container {
   background: white; /* White background for light mode */
   padding: 20px;

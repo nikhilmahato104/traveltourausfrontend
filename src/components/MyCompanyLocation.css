@@ -1,6 +1,7 @@
 .company-location {
     text-align: center;
     padding: 20px;
+    
   }
   
   .company-location h2 {
@@ -13,12 +14,46 @@
     margin-bottom: 10px;
   }
   
-  .map-container-company {
-    margin-top: 20px;
+  .map-container-company iframe{
+    margin-top: 10px;
     width: 100%;
-    max-width: 90%; /* Control max width */
-    height: 50vh;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 95%; /* Control max width */
+    height: 28vh;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: 2px solid #fa8500;
+    border-radius: 10px;
   }
+  .map-container-company {
+    border: 2px solid #fa8500;
+    border-radius: 10px;
+    height: 31vh;
+  }
+
+
+
+  /* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .company-location {
+    padding: 4px;
+  }
+
+  .company-location h2 {
+    font-size: 18px;
+  }
+
+  .company-location p {
+    font-size: 14px;
+  }
+
+  .map-container-company {
+    height: 220px;
+  }
+  .map-container-company iframe{
+    
+    height: 28vh;
+     height: 200px; 
+    
+  }
+}
   
