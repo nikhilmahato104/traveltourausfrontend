@@ -1,0 +1,115 @@
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+  
+  .stats-circle {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: radial-gradient(circle at top left, #ffffff, #e0e0e0, #b3b3b3);
+    box-shadow: inset -8px -8px 12px rgba(255, 255, 255, 0.5),
+      inset 8px 8px 12px rgba(0, 0, 0, 0.15),
+      10px 10px 15px rgba(0, 0, 0, 0.3),
+      -6px -6px 10px rgba(255, 255, 255, 0.6);
+    position: relative;
+    animation: breathing 3s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .stats-circle.orange {
+    background: radial-gradient(circle at top left, #ffe8d5, #ffba82, #ff6200);
+  }
+  
+  .stats-circle.purple {
+    background: radial-gradient(circle at top left, #ede7ff, #c7b3ff, #956dff);
+  }
+  
+  .stats-circle.green {
+    background: radial-gradient(circle at top left, #e4f8e4, #a3e6a3, #5fd75f);
+  }
+  
+  @keyframes breathing {
+    0% {
+      transform: translateY(0); /* Original position */
+    }
+    50% {
+      transform: translateY(-8px); /* Slight upward movement */
+    }
+    100% {
+      transform: translateY(0); /* Back to original position */
+    }
+  }
+  
+  .stats-circle:hover {
+    transform: translateY(-12px); /* Lift slightly on hover */
+    box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.6), 
+      inset 10px 10px 15px rgba(0, 0, 0, 0.2), 
+      12px 12px 20px rgba(0, 0, 0, 0.4), 
+      -8px -8px 12px rgba(255, 255, 255, 0.8);
+  }
+  
+  .stats-content {
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5),
+      -1px -1px 2px rgba(0, 0, 0, 0.15);
+  }
+  
+  .stats-number {
+    font-size: 36px;
+    margin: 0;
+    color: #333;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7),
+      -1px -1px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stats-label {
+    font-size: 16px;
+    margin: 10px 0 0;
+    color: #555;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5),
+      -1px -1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .stats-circle {
+      width: 140px;
+      height: 140px;
+    }
+  
+    .stats-number {
+      font-size: 28px;
+    }
+  
+    .stats-label {
+      font-size: 12px;
+    }
+  }
+  .stats-wrapper {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .stats-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color:#716363;
+    margin-bottom: 10px;
+  }
+  
+  .stats-paragraph {
+    font-size: 1.2rem;
+    color: #898080;
+    margin-bottom: 30px;
+    
+  }
+  

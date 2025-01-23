@@ -1,0 +1,159 @@
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    flex: 1 1 300px;
+  }
+  
+  .footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section .social-icons a {
+    margin-right: 1rem;
+    color: var(--footer-icon-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section .social-icons a:hover {
+    color: var(--footer-icon-hover-color);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--footer-border);
+    padding-top: 1rem;
+  }
+  /* General Footer Styles */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align the footer sections */
+    align-items: center; /* Align items to the center */
+    gap: 2rem;
+    text-align: center; /* Center-align all text globally */
+  }
+  
+  .footer-section {
+    flex: 1 1 300px;
+    display: flex; /* Enable flexbox for internal alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-section .social-icons {
+    display: flex;
+    justify-content: center; /* Center-align the icons */
+    gap: 1rem;
+  }
+  
+  .footer-section .social-icons a {
+    color: var(--footer-icon-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section .social-icons a:hover {
+    color: var(--footer-icon-hover-color);
+  }
+  
+  /* Footer Bottom Section */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--footer-border);
+    padding-top: 1rem;
+  }
+  
+  /* Responsive Design for Mobile View */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column; /* Stack sections vertically */
+    }
+  
+    .footer-section {
+      flex: 1 1 auto;
+      text-align: center; /* Center-align text in mobile view */
+    }
+  }
+  
+  /* Footer Styles */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  /* Social Icon Styling */
+  .footer-section .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .footer-section .social-icons a {
+    color: var(--footer-icon-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section .social-icons a:hover {
+    color: var(--footer-icon-hover-color);
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--footer-border);
+    padding-top: 1rem;
+  }
+  
