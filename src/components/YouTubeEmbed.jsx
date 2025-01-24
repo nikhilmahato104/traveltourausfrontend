@@ -38,4 +38,3 @@ const YouTubeEmbed = ({ videoId }) => {
 };
 
 export default YouTubeEmbed;
-

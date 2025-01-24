@@ -19,7 +19,6 @@ const MyCompanyLocation = () => {
         <iframe
           title="Company Location"
           src={mapUrl}
-          
           frameBorder="0"
           style={{ border: 0 }}
           allowFullScreen

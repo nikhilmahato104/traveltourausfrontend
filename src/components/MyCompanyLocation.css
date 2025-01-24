@@ -1,59 +1,84 @@
 .company-location {
-    text-align: center;
-    padding: 20px;
-    
-  }
-  
-  .company-location h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .company-location p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .map-container-company iframe{
-    margin-top: 10px;
-    width: 100%;
-    max-width: 95%; /* Control max width */
-    height: 28vh;
-    margin-left: 0px;
-    margin-right: 0px;
-    border: 2px solid #fa8500;
-    border-radius: 10px;
-  }
+  text-align: center;
+  margin: 40px;
+  transition: all 0.3s ease; /* Smooth transition */
+  padding: 10px; /* Added padding for mobile devices */
+}
+
+/* Light Mode Styling */
+.company-location h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #8d8986; /* Default dark text for light mode */
+}
+
+.company-location p {
+  font-size: 1.2rem;
+  color: #b7b0a9; /* Lighter text for description */
+}
+
+.map-container-company {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Default height for mobile */
+  margin-top: 20px;
+}
+
+/* Media query for desktop to increase the map height */
+@media (min-width: 1024px) {
   .map-container-company {
-    border: 2px solid #fa8500;
-    border-radius: 10px;
-    height: 31vh;
-  }
-
-
-
-  /* For screens smaller than 768px */
-@media (max-width: 768px) {
-  .company-location {
-    padding: 4px;
-  }
-
-  .company-location h2 {
-    font-size: 18px;
-  }
-
-  .company-location p {
-    font-size: 14px;
-  }
-
-  .map-container-company {
-    height: 220px;
-  }
-  .map-container-company iframe{
-    
-    height: 28vh;
-     height: 200px; 
-    
+    height: 600px; /* Larger height for desktop */
   }
 }
-  
+
+/* Ensure the iframe takes up the full container */
+.map-container-company iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Dark Mode Styling */
+.company-location.dark {
+  background-color: #020111; /* Dark background for the section */
+  color: #fff; /* White text for the entire section */
+}
+
+.company-location.dark h2 {
+  color: #fff; /* White text for header */
+}
+
+.company-location.dark p {
+  color: #ccc; /* Lighter text for description */
+}
+
+/* Optional: Add darker borders or shadow to the map container */
+.company-location.dark .map-container-company {
+  border: 1px solid #333;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .company-location {
+    margin: 0px 0px 15px 0px; /* Reduced margin for mobile */
+    padding: 0px;  /* Added padding to give some space on small screens */
+  }
+
+  .company-location h2 {
+    font-size: 1.6rem; /* Smaller header font size for mobile */
+  }
+
+  .company-location p {
+    font-size: 1rem; /* Smaller font size for the paragraph */
+  }
+
+  .map-container-company {
+    height: 250px; /* Reduced map height for mobile */
+  }
+
+  /* Optional: Reduce margin for the map container for mobile */
+  .map-container-company {
+    margin-top: 10px; /* Reduced margin for better alignment */
+  }
+}
+

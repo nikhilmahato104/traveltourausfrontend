@@ -372,3 +372,84 @@ body.dark-mode .tour-price {
 body.dark-mode .tour-price span {
   color: #000000; /* The "Price :" label should be white in dark mode */
 }
+
+
+
+
+
+
+/* YAHA KA CODE KO V NHINN CHHEDNA HAIN */
+/* black background card for jab v dark mood on hoga */
+/* Dark Mode Adjustments */
+body.dark-mode {
+  background-color: #020111 ; /* Dark background for the body */
+  color: white; /* White text color by default */
+}
+
+/* Tour Card in Dark Mode */
+body.dark-mode .tour-card {
+  background-color:#020111 ; /* Dark background for the card */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Lighter shadow */
+}
+
+/* Text inside the card */
+body.dark-mode .tour-name,
+body.dark-mode .tour-description,
+body.dark-mode .tour-price {
+  color: white; /* White text color for all text elements */
+}
+
+/* Map Container in Dark Mode */
+body.dark-mode .map-container {
+  border: 1px solid #555; /* Lighter border */
+}
+
+/* Button in Dark Mode */
+body.dark-mode .book-now-btn {
+  background-color: #fa8500; /* Button remains orange */
+  color: #ffffff; /* Text color remains white */
+}
+
+body.dark-mode .book-now-btn:hover {
+  background-color: #6b2cb7; /* Hover effect */
+}
+
+/* Price in Dark Mode */
+body.dark-mode .tour-price {
+  color: #fa8500; /* Price text remains orange */
+}
+
+body.dark-mode .tour-price span {
+  color: white; /* Price label ("Price:") will be white */
+}
+
+/* Skeleton Loader in Dark Mode */
+body.dark-mode .skeleton {
+  background-color: #333333; /* Dark background for skeleton */
+}
+
+body.dark-mode .skeleton-text {
+  background-color: #444444; /* Lighter skeleton loading blocks */
+}
+
+/* Tour Footer in Dark Mode */
+body.dark-mode .tour-footer {
+  border-top: 1px solid #555; /* Lighter border for footer */
+}
+
+/* Booking Form in Dark Mode */
+body.dark-mode .booking-form-container {
+  background: #333333; /* Dark background for the booking form */
+  color: white; /* White text color */
+}
+
+body.dark-mode .booking-form-container input,
+body.dark-mode .booking-form-container select {
+  background-color: #020111 ; /* Dark input background */
+  color: white; /* White text color for inputs */
+  border: 1px solid #555; /* Lighter border for inputs */
+}
+
+body.dark-mode .close-form-btn {
+  color: white; /* Close button color */
+}

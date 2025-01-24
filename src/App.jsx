@@ -13,7 +13,6 @@ const App = () => {
         {/* Define Route paths and corresponding components */}
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<AdminPanel />} />
-        
       </Routes>
     </Router>
     

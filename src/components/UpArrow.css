@@ -1,0 +1,28 @@
+.up-arrow-btn {
+    position: fixed;
+    bottom: 30px;  /* Position from bottom */
+    right: 30px;   /* Position from right */
+    background-color: #6b2cb7; /* Button color */
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .up-arrow-btn:hover {
+    background-color: orange; /* Darker color on hover */
+    transform: scale(1.1); /* Slight scale effect */
+  }
+  
+  .up-arrow-btn:focus {
+    outline: none;
+  }
+  
+  .up-arrow-btn:active {
+    background-color: purple; /* Even darker color when clicked */
+  }
+  

@@ -18,6 +18,7 @@ const BookingForm = ({ onClose, tourName }) => {
     { code: "+93", country: "Afghanistan" },
     { code: "+355", country: "Albania" },
     { code: "+91", country: "India" },
+    
   ];
 
   const handleInputChange = (e) => {
@@ -148,20 +149,21 @@ const BookingForm = ({ onClose, tourName }) => {
           </>
         ) : (
           <div className="booking-success">
-  <h3>Your booking was successful!</h3>
-  <p>
-    Thank you for booking with us. Our team will contact you within 20
-    minutes.
-  </p>
-  <p>You can proceed with one of the following payment options:</p>
-  <div className="payment-options">
-    {/* Pay Online Button */}
-    <button
-      className="payment-option-btn"
-      onClick={() => {
-        // Show Pay Online custom message
-        const onlineMessageDiv = document.getElementById("custom-message");
-        onlineMessageDiv.innerHTML = `
+            <h3>Your booking was successful!</h3>
+            <p>
+              Thank you for booking with us. Our team will contact you within 20
+              minutes.
+            </p>
+            <p>You can proceed with one of the following payment options:</p>
+            <div className="payment-options">
+              {/* Pay Online Button */}
+              <button
+                className="payment-option-btn"
+                onClick={() => {
+                  // Show Pay Online custom message
+                  const onlineMessageDiv =
+                    document.getElementById("custom-message");
+                  onlineMessageDiv.innerHTML = `
           <h4>Online Payment Unavailable</h4>
           <p>
             Our online payment method is currently unavailable for non-Australian customers.
@@ -169,53 +171,54 @@ const BookingForm = ({ onClose, tourName }) => {
           </p>
           <button class="close-message-btn">Close</button>
         `;
-        onlineMessageDiv.style.display = "block";
+                  onlineMessageDiv.style.display = "block";
 
-        // Add event listener to the close button
-        onlineMessageDiv.querySelector(".close-message-btn").addEventListener("click", () => {
-          onlineMessageDiv.style.display = "none";
-        });
-      }}
-    >
-      Pay Online
-    </button>
+                  // Add event listener to the close button
+                  onlineMessageDiv
+                    .querySelector(".close-message-btn")
+                    .addEventListener("click", () => {
+                      onlineMessageDiv.style.display = "none";
+                    });
+                }}
+              >
+                Pay Online
+              </button>
 
-    {/* Pay in Cash Button */}
-    <button
-      className="payment-option-btn"
-      onClick={() => {
-        // Show Pay in Cash custom message with countdown
-        const cashMessageDiv = document.getElementById("custom-message");
-        cashMessageDiv.innerHTML = `
+              {/* Pay in Cash Button */}
+              <button
+                className="payment-option-btn"
+                onClick={() => {
+                  // Show Pay in Cash custom message with countdown
+                  const cashMessageDiv =
+                    document.getElementById("custom-message");
+                  cashMessageDiv.innerHTML = `
           <h4>Thank You for Choosing Pay in Cash!</h4>
           <p>Redirecting to the homepage in <span id="countdown">3</span> seconds...</p>
         `;
-        cashMessageDiv.style.display = "block";
+                  cashMessageDiv.style.display = "block";
 
-        let countdown = 3;
-        const interval = setInterval(() => {
-          countdown -= 1;
-          document.getElementById("countdown").textContent = countdown;
-          if (countdown === 0) {
-            clearInterval(interval);
-            cashMessageDiv.style.display = "none";
-            // document.write("Redirecting to homepage...");
-            //close the form
-            onClose();
-          }
-        }, 1000);
-      }}
-    >
-      Pay in Cash
-    </button>
-  </div>
+                  let countdown = 3;
+                  const interval = setInterval(() => {
+                    countdown -= 1;
+                    document.getElementById("countdown").textContent =
+                      countdown;
+                    if (countdown === 0) {
+                      clearInterval(interval);
+                      cashMessageDiv.style.display = "none";
+                      // document.write("Redirecting to homepage...");
+                      //close the form
+                      onClose();
+                    }
+                  }, 1000);
+                }}
+              >
+                Pay in Cash
+              </button>
+            </div>
 
-  {/* Custom Message Div */}
-  <div id="custom-message" className="custom-message"></div>
-  
-</div>
-
-
+            {/* Custom Message Div */}
+            <div id="custom-message" className="custom-message"></div>
+          </div>
         )}
       </div>
     </div>
