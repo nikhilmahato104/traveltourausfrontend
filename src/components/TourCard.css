@@ -345,3 +345,30 @@ iframe {
     font-size: 1.2rem;
   }
 }
+
+body.dark-mode .tour-price {
+  color: #fa8500; /* Ensure the price is visible in dark mode */
+}
+body.dark-mode .tour-price span {
+  color: #ffffff; /* Set the span color for the "Price :" label to white in dark mode */
+}
+
+/* Tour Price */
+.tour-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fa8500; /* Always orange for the price number */
+}
+
+.tour-price span {
+  color: #000000; /* This is for "Price :" label text */
+}
+
+/* Dark Mode Adjustments for the price */
+body.dark-mode .tour-price {
+  color: #fa8500; /* Ensure price number stays orange in dark mode */
+}
+
+body.dark-mode .tour-price span {
+  color: #000000; /* The "Price :" label should be white in dark mode */
+}

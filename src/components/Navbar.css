@@ -30,7 +30,7 @@
 
 /* Dark Mode Styles */
 .navbar.dark {
-  background-color: #100f27; /* Dark background */
+  background-color: #020111; /* YE DARK MOOD KA PRIMARY COLOR HAIN DONT CHANE WHILE PRODUCTION */
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 4px 10px rgb(255, 255, 255); /* Adding a bottom shadow with a greenish tint */
 }
 
@@ -41,7 +41,7 @@
 }
 
 body.dark-mode {
-  background-color: #121212; /* Dark background for the body */
+  background-color: #020111; /* Dark background for the body */
   color: #fff; /* White text for dark mode */
 }
 
@@ -231,3 +231,8 @@ body.dark-mode {
   color: #ff9900;
   font-weight: bold;
 }
+
+
+
+
+/* dark mood */

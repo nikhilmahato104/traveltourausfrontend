@@ -15,6 +15,7 @@ const Home = () => {
       <Navbar />
       <WhatsAppButton />
       <Slider /> {/* Slider includes Search Bar and Get Started Button */}
+      <Divider />
       <Heading />
       <Divider />
       <TourCardList />
