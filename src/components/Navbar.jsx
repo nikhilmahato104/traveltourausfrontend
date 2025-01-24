@@ -28,6 +28,7 @@ const Navbar = () => {
   const handleDarkModeToggle = () => {
     setIsDarkMode(!isDarkMode);
   };
+  
 
   return (
     <nav className={`navbar ${isDarkMode ? "dark" : ""}`}>

@@ -275,3 +275,73 @@ iframe {
   text-align: center;
   margin: 0 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* map ko chaota  karne k liye in mobile mobile-desktop view*/
+/* Media Query for Desktop */
+@media (min-width: 768px) {
+  .tour-card {
+    max-width: 500px; /* Adjust card width for desktop */
+  }
+
+  .tour-details {
+    padding: 20px;
+  }
+
+  .tour-name {
+    font-size: 1.5rem;
+  }
+
+  .tour-description {
+    font-size: 1.1rem;
+  }
+
+  .tour-price {
+    font-size: 1.2rem;
+  }
+
+  .book-now-btn {
+    font-size: 1.1rem;
+  }
+
+  .map-container {
+    height: 300px; /* Larger map on desktop */
+  }
+
+  .skeleton-card {
+    width: 500px; /* Adjust skeleton card for desktop */
+  }
+}
+
+/* Media Query for Large Desktop */
+@media (min-width: 1024px) {
+  .tour-card {
+    max-width: 600px; /* Further adjustment for large desktops */
+  }
+
+  .tour-name {
+    font-size: 1.8rem;
+  }
+
+  .tour-description {
+    font-size: 1.2rem;
+  }
+
+  .tour-price {
+    font-size: 1.4rem;
+  }
+
+  .book-now-btn {
+    font-size: 1.2rem;
+  }
+}

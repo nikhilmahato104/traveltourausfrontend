@@ -1,6 +1,6 @@
 /* Default Carousel Styles */
 .carousel {
-  position:relative;
+  position: relative;
   width: 100%; /* Full-width */
   height: 70vh; /* Default height */
   overflow: hidden; /* Hide parts outside the container */
@@ -9,7 +9,6 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better depth */
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)); /* Dark gradient at the bottom for better visibility of text */
   scroll-behavior: smooth;
-  
 }
 
 /* Carousel Images Container */
@@ -18,8 +17,6 @@
   transition: transform 0.8s ease-in-out;
   width: 100%;
   height: 100%;
- 
-
 }
 
 /* Individual Carousel Item */
@@ -68,11 +65,10 @@
   z-index: 10;
 }
 
-.carousel-controls button{
+.carousel-controls button {
   pointer-events: auto;
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
-  /* height: 10px; */
   color: white;
   font-size: 1.5rem; /* Increase size for better visibility */
   cursor: pointer;
@@ -82,9 +78,9 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow for buttons */
   background: radial-gradient(circle, rgba(1, 1, 0.1, 0.1), rgba(0, 0, 0, 0.3));
 }
-#second{
-   /* Radial gradient for depth */
-   border-radius: 10px 0px 0px 10px; 
+
+#second {
+  border-radius: 10px 0px 0px 10px;
 }
 
 .carousel-controls button:hover {
@@ -129,38 +125,58 @@
 }
 
 /* Responsive Design */
+
+/* Mobile Devices (up to 480px) */
 @media (max-width: 480px) {
   .carousel {
-    height: 25vh; /* Reduce height for mobile */
+    height: 25vh; /* Mobile height */
   }
+
   .carousel-controls button {
     font-size: 1.8rem; /* Smaller control size on mobile */
     padding: 10px;
   }
 }
 
+/* Tablets (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .carousel {
-    height: 30vh; /* Adjust height for medium devices */
+    height: 30vh; /* Adjust height for tablets */
   }
 }
 
+/* Desktop & Large Tablets (769px and up) */
 @media (min-width: 769px) {
   .carousel {
-    height: 60vh;/* Adjust height for larger screens */
+    height: 60vh; /* Adjust height for larger screens */
   }
 }
-/* scroll behaviour */
-/* Carousel Images Container */
+
+/* Force Desktop View on Mobile (min-width: 769px, user-agent forces desktop view on mobile) */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  /* When mobile device forces desktop site, adjust the height */
+  .carousel {
+    height: 30vh; /* Reduce carousel height for mobile in desktop mode */
+  }
+
+  .carousel-controls button {
+    font-size: 1.4rem; /* Adjust button size */
+    padding: 8px;
+  }
+
+  .carousel-dots button {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+/* Scroll Behavior */
 .carousel-images {
   display: flex;
   transition: transform 0.3s ease-out; /* Smooth transition after dragging */
   width: 100%;
   height: 100%;
 }
-
-
-
 
 .carousel-item {
   flex: 0 0 100%; /* Full width for each image */
@@ -174,5 +190,3 @@
   object-fit: cover;
   border-radius: 0px;
 }
-
-/* Other styles remain unchanged */

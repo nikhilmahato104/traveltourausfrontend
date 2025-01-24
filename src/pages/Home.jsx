@@ -16,6 +16,7 @@ const Home = () => {
       <WhatsAppButton />
       <Slider /> {/* Slider includes Search Bar and Get Started Button */}
       <Heading />
+      <Divider />
       <TourCardList />
       
       {/* Divider */}
