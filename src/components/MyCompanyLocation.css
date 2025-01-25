@@ -1,8 +1,10 @@
+/* Default Styling */
 .company-location {
   text-align: center;
   margin: 40px;
   transition: all 0.3s ease; /* Smooth transition */
   padding: 10px; /* Added padding for mobile devices */
+  will-change: transform; /* Optimize transformation */
 }
 
 /* Light Mode Styling */
@@ -22,12 +24,15 @@
   width: 100%;
   height: 400px; /* Default height for mobile */
   margin-top: 20px;
+  will-change: transform; /* Optimize map container transformation */
+  overflow: hidden; /* Hide potential overflow */
+  border-radius: 8px; /* Rounded corners for a smooth look */
 }
 
 /* Media query for desktop to increase the map height */
 @media (min-width: 1024px) {
   .map-container-company {
-    height: 600px; /* Larger height for desktop */
+    height: 300px; /* Larger height for desktop */
   }
 }
 
@@ -36,12 +41,15 @@
   width: 100%;
   height: 100%;
   border: none;
+  border-radius: 8px; /* Match the border-radius for a smooth corner */
+  transition: transform 0.3s ease; /* Smooth transition for iframe */
 }
 
 /* Dark Mode Styling */
 .company-location.dark {
   background-color: #020111; /* Dark background for the section */
   color: #fff; /* White text for the entire section */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition between modes */
 }
 
 .company-location.dark h2 {
@@ -74,11 +82,25 @@
 
   .map-container-company {
     height: 250px; /* Reduced map height for mobile */
+    margin-top: 10px; /* Reduced margin for better alignment */
   }
 
-  /* Optional: Reduce margin for the map container for mobile */
-  .map-container-company {
-    margin-top: 10px; /* Reduced margin for better alignment */
+  .map-container-company iframe {
+    transform: scale(1.05); /* Slight zoom effect for mobile */
   }
 }
 
+/* Smooth Scroll on Page */
+html {
+  scroll-behavior: smooth; /* Smooth scroll */
+}
+
+/* Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+  .company-location,
+  .company-location h2,
+  .company-location p,
+  .map-container-company iframe {
+    transition: none; /* Disable transitions for users who prefer reduced motion */
+  }
+}

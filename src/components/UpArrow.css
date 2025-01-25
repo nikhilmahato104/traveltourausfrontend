@@ -1,28 +1,43 @@
 .up-arrow-btn {
-    position: fixed;
-    bottom: 30px;  /* Position from bottom */
-    right: 30px;   /* Position from right */
-    background-color: #6b2cb7; /* Button color */
-    color: white;
-    font-size: 20px;
-    border: none;
-    border-radius: 50%;
-    padding: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-  
-  .up-arrow-btn:hover {
-    background-color: orange; /* Darker color on hover */
-    transform: scale(1.1); /* Slight scale effect */
-  }
-  
-  .up-arrow-btn:focus {
-    outline: none;
-  }
-  
-  .up-arrow-btn:active {
-    background-color: purple; /* Even darker color when clicked */
-  }
-  
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #00aaff;
+  color: white;
+  font-size: 25px;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.up-arrow-btn.fade-in {
+  opacity: 1;
+  /* border-radius: 50%; */
+}
+
+.up-arrow-btn:hover {
+  background-color: #0077cc;
+  transform: translateY(-5px);
+  /* border-radius: 50%; */
+}
+
+.up-arrow-btn:active {
+  background-color: #005f99;
+  /* border-radius: 50%; */
+}
+
+.up-arrow-btn:focus {
+  outline: none; /* Removes the default outline */
+  -webkit-appearance: none; /* Removes any default mobile browser outline */
+  box-shadow: none; /* Ensures no focus ring appears */
+}
+
+/* Additional fix for iOS Safari focus ring (if needed) */
+.up-arrow-btn:focus-visible {
+  outline: none;
+}

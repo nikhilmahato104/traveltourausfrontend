@@ -13,6 +13,19 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
+
+
+      {/* About Us Section */}
+      <div className="footer-section about-us">
+        <h2>About Us</h2>
+        <p>
+          Aviatours, Australia is your trusted partner for exploring
+          Australia's beauty—from the Outback to the coast. We offer exceptional
+          tour packages, reliable hotel bookings, and seamless travel services.
+        </p>
+      </div>
+
+
       {/* What We Provide Section */}
       <div className="footer-section provide">
         <h2>What We Provide</h2>
@@ -29,18 +42,9 @@ const Footer = () => {
       <div className="footer-section contact-us">
         <h2>Contact Us</h2>
         <p>123 Sydney Road, Melbourne, Australia</p>
-        <p>Phone: +61 123 456 789</p>
-        <p>Email: contact@traveltoursaus.com</p>
-        <p>
-          WhatsApp us:{" "}
-          <a
-            href="https://wa.me/919304260733"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            +91 9304260733
-          </a>
-        </p>
+        <p>Phone: +61 439 551 994</p>
+        <p>Email: aviatours@gmail.com</p>
+       
         <div className="social-icons">
           <a
             href="https://www.instagram.com"
@@ -64,7 +68,7 @@ const Footer = () => {
             <FaTwitter />
           </a>
           <a
-            href="https://wa.me/919304260733"
+            href="https://wa.me/61439551994"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -73,15 +77,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* About Us Section */}
-      <div className="footer-section about-us">
-        <h2>About Us</h2>
-        <p>
-          Travel Tours Australia is your trusted partner for exploring
-          Australia's beauty—from the Outback to the coast. We offer exceptional
-          tour packages, reliable hotel bookings, and seamless travel services.
-        </p>
-      </div>
       {/* Developers Section */}
       <div className="footer-section developers">
         <h2>Meet the Developers</h2>
@@ -90,9 +85,9 @@ const Footer = () => {
           web experiences.
         </p>
         <p>
-          <strong>Nikhil Ma</strong> - Full Stack Developer (
+          <strong>Nikhil</strong>(INDIA) - Software Devloper (
           <a
-            href="https://www.linkedin.com/in/nikhil-ma"
+            href="https://www.linkedin.com/in/nikhil-mahato/?originalSubdomain=in"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -134,8 +129,8 @@ const Footer = () => {
 
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Travel Tours Australia. All rights reserved.</p>
-        <p>Designed with ❤️ by the Travel Tours Web Team.</p>
+        <p>&copy; {new Date().getFullYear()} Aviatours Australia. All rights reserved.</p>
+        <p>Designed with ❤️ by the Aviatours Web Team.</p>
       </div>
     </footer>
   );

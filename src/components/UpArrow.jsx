@@ -1,40 +1,36 @@
 import React, { useState, useEffect } from "react";
-import "./UpArrow.css"; // We'll style the button here
+import "./UpArrow.css";
 
 const UpArrow = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Detect when user scrolls
     const handleScroll = () => {
       if (window.scrollY > window.innerHeight) {
-        setIsVisible(true); // Show button if scrolled past 100vh
+        setIsVisible(true);
       } else {
-        setIsVisible(false); // Hide button if back at top
+        setIsVisible(false);
       }
     };
 
-    // Add event listener on scroll
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scrolling
+      behavior: "smooth",
     });
   };
 
   return (
     <div>
       {isVisible && (
-        <button className="up-arrow-btn" onClick={scrollToTop}>
+        <button className="up-arrow-btn fade-in" onClick={scrollToTop}>
           ↑
         </button>
       )}

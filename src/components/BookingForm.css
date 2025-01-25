@@ -311,7 +311,7 @@ body .close-form-btn {
 /* Progress Bar Fill */
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #28f005, #ffa500, #2cb733);
+  background: linear-gradient(90deg, #0331d8, #ffa500, #01db0c);
   background-size: 200% 100%; /* For gradient animation */
   width: 0;
   animation: fillProgress 2s ease-in-out forwards, shine 1.5s infinite;
@@ -394,6 +394,151 @@ body .close-form-btn {
   padding: 10px 20px;
   cursor: pointer;
 }
+
+.close-message-btn:hover {
+  background-color: #d57d00;
+}
+
+/* Payment Buttons */
+.payment-option-btn {
+  padding: 10px 20px;
+  background-color: #fa8500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.payment-option-btn:hover {
+  background-color: #d57d00;
+}
+
+
+
+
+
+/* UPDATE THE CONFIRM */
+/* Progress Bar Container */
+.progress-bar-container {
+  width: 100%;
+  height: 24px;
+  background: linear-gradient(90deg, #eee, #ddd);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 8px; /* Add some space for better alignment */
+}
+
+/* Progress Bar Fill */
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0331d8, #ffa500, #01db0c);
+  background-size: 200% 100%; /* For gradient animation */
+  width: 0;
+  animation: fillProgress 2s ease-in-out forwards, shine 1.5s infinite;
+  border-radius: 6px; /* Smooth edges */
+  box-shadow: 0 0 8px rgba(255, 140, 0, 0.6), 0 0 15px rgba(255, 165, 0, 0.4); /* Glow effect */
+}
+
+/* Smooth Fill Animation */
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Gradient Shine Animation */
+@keyframes shine {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+/* Progress Text */
+.progress-bar-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Optional: Progress Button Enhancements */
+.confirm-booking-btn {
+  padding: 12px;
+  background-color: #fa8500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.confirm-booking-btn.progress-active {
+  background-color: #6b2cb7; /* Lighter orange during progress */
+}
+
+/* Custom Message Div */
+.custom-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white; /* Adjust to match your website's theme */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+  color: #333;
+}
+
+.custom-message h4 {
+  color: #fa8500; /* Match your website's primary color */
+  margin-bottom: 10px;
+}
+
+.custom-message p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.close-message-btn {
+  background-color: #fa8500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.progress-bar-container {
+  display: flex;
+  align-items: center; /* Vertically centers content */
+  justify-content: center; /* Horizontally centers content */
+}
+
+.progress-bar-text {
+  margin-left: 10px; /* Adjust the spacing between the progress bar and the text */
+  white-space: nowrap; /* Prevents wrapping of the text */
+}
+
 
 .close-message-btn:hover {
   background-color: #d57d00;

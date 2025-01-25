@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${isDarkMode ? "dark" : ""}`}>
-      <div className="logo">Travel Tours</div>
+      <div className="logo"><span>A</span>viatours</div>
 
       {/* Dark Mode Button with Sun/Moon Emojis */}
       <button className="dark-mode-btn" onClick={handleDarkModeToggle}>

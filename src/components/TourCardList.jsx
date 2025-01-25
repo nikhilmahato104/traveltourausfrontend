@@ -4,7 +4,8 @@ import TourCard from "./TourCard.jsx";
 
 // Import images from assets folder
 import slider1 from "../assets/slider2.jpg";
-import slider2 from "../assets/slider1.jpg";
+import slider5 from "../assets/slider5.jpg";
+// import slider2 from "../assets/slider1.jpg";
 import slider3 from "../assets/slider3.jpg";
 import slider4 from "../assets/slider4.jpg";
 
@@ -13,19 +14,19 @@ const TourCardList = () => {
   const dummyTours = [
     {
       id: 1,
-      name: "Maithon Damm",
+      name: "Kakadu National Park",
       description: "Experience the iconic architecture and culture of Sydney.",
       image: slider4,
-      location: "Warangle, India",
+      location: "Kakadu National Park, Austrilia",
       price: 299,
-      startPoint: "dhanbad, India",
-      endPoint: "maithon, India",
+      startPoint: "Kakadu National Park, Austrilia",
+      endPoint: "Kakadu , Austrilia",
     },
     {
       id: 2,
       name: "Great Barrier Reef",
       description: "Dive into the world’s largest coral reef system.",
-      image: slider2,
+      image: slider5,
       location: "Queensland, Australia",
       price: 499,
       startPoint: "Cairns, Queensland",
@@ -53,19 +54,19 @@ const TourCardList = () => {
     },
     {
       id: 1,
-      name: "Maithon Dam",
+      name: "Sydney Opera House",
       description: "Experience the iconic architecture and culture of Sydney.",
       image: slider4,
       location: "Warangle, India",
       price: 299,
-      startPoint: "dhanbad, India",
-      endPoint: "maithon, India",
+      startPoint: "Sydney Opera House, Austrilia",
+      endPoint: "Sydney Airport, Austrilia",
     },
     {
       id: 2,
       name: "Great Barrier Reef",
       description: "Dive into the world’s largest coral reef system.",
-      image: slider2,
+      image: slider5,
       location: "Queensland, Australia",
       price: 499,
       startPoint: "Cairns, Queensland",
