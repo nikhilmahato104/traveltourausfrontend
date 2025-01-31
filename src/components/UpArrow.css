@@ -1,43 +1,41 @@
+/* UpArrow.css */
 .up-arrow-btn {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #00aaff;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 25px;
   border: none;
   border-radius: 50%;
-  padding: 15px;
+  padding: 10px;
+  font-size: 24px; /* You can adjust the icon size */
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  border-radius: 50%;
-}
-
-.up-arrow-btn.fade-in {
-  opacity: 1;
-  /* border-radius: 50%; */
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  /* background-color: #05eb51; */
 }
 
 .up-arrow-btn:hover {
-  background-color: #0077cc;
-  transform: translateY(-5px);
-  /* border-radius: 50%; */
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.up-arrow-btn:active {
-  background-color: #005f99;
-  /* border-radius: 50%; */
+.up-arrow-btn.fade-in {
+  animation: fadeIn 0.5s ease-in;
 }
 
-.up-arrow-btn:focus {
-  outline: none; /* Removes the default outline */
-  -webkit-appearance: none; /* Removes any default mobile browser outline */
-  box-shadow: none; /* Ensures no focus ring appears */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-/* Additional fix for iOS Safari focus ring (if needed) */
-.up-arrow-btn:focus-visible {
-  outline: none;
+
+/* -webkit blue high ligth ko hatane k liye kaa  aat hain  */
+/* ISKO  YAAD RAKH LENA HAIN IIN FUTURE KAAM AA SKATA HIAN */
+.up-arrow-btn {
+  -webkit-tap-highlight-color: transparent; /* Remove the touch highlight */
+  touch-action: manipulation; /* Prevent unintended touch behaviors */
 }

@@ -100,7 +100,7 @@ const TourCardList = () => {
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
         gap: "20px",
-        padding: "20px",
+        padding: "10px",
       }}
     >
       {dummyTours.map((tour) => (

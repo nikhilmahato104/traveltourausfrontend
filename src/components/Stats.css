@@ -25,23 +25,23 @@
 /* Styling for the stats container */
 .stats-container {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  justify-content: space-around; /* Space stats evenly in a single line */
+  gap: 10px; /* Adjust space between stats */
   padding: 30px;
+  flex-wrap: nowrap; /* Ensure stats stay on one line */
+  overflow-x: auto; /* Allow horizontal scrolling on small screens if needed */
 }
 
-/* Styling for each stat circle */
+/* Styling for each stat rectangle */
 .stats-circle {
-  width: 180px;
-  height: 180px;
+  width: 200px; /* Adjust width for rectangle */
+  height: 120px; /* Adjust height for rectangle */
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 10px; /* Slight rounding of corners (optional) */
   background-color: #e0e0e0; /* Plain background color */
   transition: transform 0.3s ease; /* Smooth transition for scaling */
-  animation: moveHeart 3s ease-in-out infinite; /* Heartbeat-like movement */
 }
 
 .stats-circle.orange {
@@ -56,28 +56,12 @@
   background-color: #a3e6a3; /* Simple green color */
 }
 
-/* Keyframe animation for heart-like movement */
-@keyframes moveHeart {
-  0%, 100% {
-    transform: translateY(0) translateX(0);
-  }
-  25% {
-    transform: translateY(-10px) translateX(10px);
-  }
-  50% {
-    transform: translateY(0) translateX(0);
-  }
-  75% {
-    transform: translateY(10px) translateX(-10px);
-  }
-}
-
 /* Hover effect */
 .stats-circle:hover {
   transform: scale(1.05); /* Slight scale effect on hover */
 }
 
-/* Content inside each stat circle */
+/* Content inside each stat rectangle */
 .stats-content {
   text-align: center;
   color: #764646;
@@ -97,17 +81,41 @@
 }
 
 /* Responsive Design */
+
+/* For tablets and mobile screens (max-width: 768px) */
 @media (max-width: 768px) {
   .stats-circle {
-    width: 140px;
-    height: 140px;
+    width: 150px; /* Adjust size for mobile */
+    height: 90px; /* Adjust size for mobile */
   }
 
   .stats-number {
-    font-size: 28px;
+    font-size: 24px; /* Smaller number size for mobile */
   }
 
   .stats-label {
-    font-size: 12px;
+    font-size: 12px; /* Smaller label size for mobile */
   }
 }
+
+/* For very small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .stats-circle {
+    width: 100px; /* Further reduce size for very small screens */
+    height: 60px; /* Further reduce size for very small screens */
+  }
+
+  .stats-number {
+    font-size: 18px; /* Even smaller number size */
+  }
+
+  .stats-label {
+    font-size: 10px; /* Even smaller label size */
+  }
+}
+
+
+
+
+
+

@@ -10,15 +10,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff; /* Light background for the navbar */
+  background-color: #ffffff; 
   padding: 15px 30px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 0px rgb(0, 0, 0), 0 4px 10px rgb(0, 0, 0); /* Adding a bottom shadow with a greenish tint */
+  box-shadow: 0 4px 0px rgb(0, 0, 0), 0 4px 10px rgb(0, 0, 0); 
   transition: all 0.3s ease;
   border-radius: 0px 0px 2px 2px;
+  cursor: pointer;
 }
 
 /* Light Mode Font Colors */
@@ -42,7 +43,7 @@
 
 body.dark-mode {
   background-color: #020111; /* Dark background for the body */
-  color: #fff; /* White text for dark mode */
+  color: #fff; 
 }
 
 /* Logo Styling */
@@ -236,3 +237,9 @@ body.dark-mode {
 
 
 /* dark mood */
+nav img{
+  height: 35px;
+  padding-left: 0px;
+  margin-top: 0%;
+  
+}

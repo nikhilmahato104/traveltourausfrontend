@@ -1,7 +1,7 @@
 /* Default Styling */
 .company-location {
   text-align: center;
-  margin: 40px;
+  margin: 0px;
   transition: all 0.3s ease; /* Smooth transition */
   padding: 10px; /* Added padding for mobile devices */
   will-change: transform; /* Optimize transformation */
@@ -11,12 +11,12 @@
 .company-location h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: #8d8986; /* Default dark text for light mode */
+  color: #000000; /* Default dark text for light mode */
 }
 
 .company-location p {
   font-size: 1.2rem;
-  color: #b7b0a9; /* Lighter text for description */
+  color: #000000; /* Lighter text for description */
 }
 
 .map-container-company {
@@ -103,4 +103,12 @@ html {
   .map-container-company iframe {
     transition: none; /* Disable transitions for users who prefer reduced motion */
   }
+}
+
+
+
+
+body.dark-mode .company-location h2,
+body.dark-mode .company-location p {
+  color: rgb(255, 255, 255); /* Text color for dark mode */
 }

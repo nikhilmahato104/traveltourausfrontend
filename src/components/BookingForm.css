@@ -1,7 +1,7 @@
 /* General Styles */
 body {
-  background-color: #ffffff; /* Light background */
-  color: #333; /* Light text color */
+  background-color: #ffffff; 
+  color: #333; 
   font-family: Arial, sans-serif;
 }
 .booking-form-container h3 span {
@@ -11,7 +11,7 @@ body {
   text-decoration-style: dotted;
 }
 
-/* Booking Form Overlay */
+
 .booking-form-overlay {
   position: fixed;
   top: 0;
@@ -22,12 +22,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Ensure the form is above other content */
+  z-index: 9999; 
 }
 
-/* Booking Form Containerd */
+
 .booking-form-container {
-  background: white; /* White background for light mode */
+  background: white;
   padding: 20px;
   border-radius: 8px;
   width: 91%;
@@ -192,7 +192,9 @@ body .close-form-btn {
 
 /* Booking Success Styling */
 /* Booking Success Popup */
-.booking-success {
+
+/* START */
+/* .booking-success {
   text-align: center;
   padding: 20px;
   background: linear-gradient(135deg, #fdfdfd, #f5f5f5);
@@ -203,7 +205,9 @@ body .close-form-btn {
   margin: 0 auto;
   position: relative;
   animation: fadeIn 0.5s ease-in-out;
-}
+} */
+/* END */
+
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -365,7 +369,7 @@ body .close-form-btn {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white; /* Adjust to match your website's theme */
+  background: white; 
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -377,7 +381,7 @@ body .close-form-btn {
 }
 
 .custom-message h4 {
-  color: #fa8500; /* Match your website's primary color */
+  color: #fa8500; 
   margin-bottom: 10px;
 }
 
@@ -428,18 +432,18 @@ body .close-form-btn {
   overflow: hidden;
   position: relative;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-top: 8px; /* Add some space for better alignment */
+  margin-top: 8px; 
 }
 
 /* Progress Bar Fill */
 .progress-bar {
   height: 100%;
   background: linear-gradient(90deg, #0331d8, #ffa500, #01db0c);
-  background-size: 200% 100%; /* For gradient animation */
+  background-size: 200% 100%; 
   width: 0;
   animation: fillProgress 2s ease-in-out forwards, shine 1.5s infinite;
-  border-radius: 6px; /* Smooth edges */
-  box-shadow: 0 0 8px rgba(255, 140, 0, 0.6), 0 0 15px rgba(255, 165, 0, 0.4); /* Glow effect */
+  border-radius: 6px; 
+  box-shadow: 0 0 8px rgba(255, 140, 0, 0.6), 0 0 15px rgba(255, 165, 0, 0.4); 
 }
 
 /* Smooth Fill Animation */
@@ -511,7 +515,7 @@ body .close-form-btn {
 }
 
 .custom-message h4 {
-  color: #fa8500; /* Match your website's primary color */
+  color: #fa8500; /*ye primary code hian*/
   margin-bottom: 10px;
 }
 
@@ -530,13 +534,13 @@ body .close-form-btn {
 }
 .progress-bar-container {
   display: flex;
-  align-items: center; /* Vertically centers content */
-  justify-content: center; /* Horizontally centers content */
+  align-items: center; 
+  justify-content: center; 
 }
 
 .progress-bar-text {
-  margin-left: 10px; /* Adjust the spacing between the progress bar and the text */
-  white-space: nowrap; /* Prevents wrapping of the text */
+  margin-left: 10px; 
+  white-space: nowrap; 
 }
 
 
@@ -557,4 +561,44 @@ body .close-form-btn {
 
 .payment-option-btn:hover {
   background-color: #d57d00;
+}
+
+.booking-success {
+  text-align: center;
+  padding: 20px;
+  background: url('../assets/booking-success.gif') center center / cover no-repeat; /* Start with GIF background */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  animation: backgroundTransition 2s ease-in-out forwards, fadeIn 0.5s ease-in-out;
+}
+.booking-success a{
+  text-decoration: none;
+  color: #ff0505;
+  font-weight: bold;
+}
+
+
+
+
+@keyframes backgroundTransition {
+  0% {
+    background: url('../assets/booking-success.gif') center center / cover no-repeat;
+  }
+  100% {
+    background: linear-gradient(135deg, #fdfdfd, #f5f5f5);
+  }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

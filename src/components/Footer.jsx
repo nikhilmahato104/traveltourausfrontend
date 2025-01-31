@@ -13,18 +13,17 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-
-
-      {/* About Us Section */}
-      <div className="footer-section about-us">
+      {/* About Us Section with an id */}
+      <div className="footer-section about-us" id="about-us">
         <h2>About Us</h2>
-        <p>
-          Aviatours, Australia is your trusted partner for exploring
-          Australia's beauty—from the Outback to the coast. We offer exceptional
-          tour packages, reliable hotel bookings, and seamless travel services.
+        <p className="large-text">
+          Aviatours, Australia is your trusted partner for exploring Australia's beauty—from the rugged Outback to the pristine coastline. We offer exceptional tour packages, reliable hotel bookings, and seamless travel services.
+          <br /><br />
+          Whether you're seeking an adventurous getaway, a relaxing retreat, or a family holiday, Aviatours ensures every journey is tailored to your needs. Discover the Great Barrier Reef, experience the vibrant culture of Sydney, or unwind in the serene landscapes of Tasmania.
+          <br /><br />
+          With a commitment to excellence, personalized customer support, and a deep passion for travel, we bring your dream vacations to life. Let Aviatours, Australia guide you on an unforgettable journey through the Land Down Under!
         </p>
       </div>
-
 
       {/* What We Provide Section */}
       <div className="footer-section provide">
@@ -38,13 +37,12 @@ const Footer = () => {
         </ul>
       </div>
 
-      {/* Contact Us Section */}
-      <div className="footer-section contact-us">
+      {/* Contact Us Section with an id */}
+      <div className="footer-section contact-us" id="contact-us">
         <h2>Contact Us</h2>
         <p>123 Sydney Road, Melbourne, Australia</p>
         <p>Phone: +61 439 551 994</p>
         <p>Email: aviatours@gmail.com</p>
-       
         <div className="social-icons">
           <a
             href="https://www.instagram.com"
@@ -77,60 +75,14 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Developers Section */}
-      <div className="footer-section developers">
-        <h2>Meet the Developers</h2>
-        <p>
-          Crafted with ❤️ by a passionate team dedicated to delivering seamless
-          web experiences.
-        </p>
-        <p>
-          <strong>Nikhil</strong>(INDIA) - Software Devloper (
-          <a
-            href="https://www.linkedin.com/in/nikhil-mahato/?originalSubdomain=in"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          )
-        </p>
-        <div className="social-icons">
-          <a
-            href="https://www.linkedin.com/in/nikhil-ma"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com/nikhil-ma"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="mailto:nikhil@example.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaEnvelope />
-          </a>
-          <a
-            href="https://twitter.com/nikhil_ma"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </a>
-        </div>
-      </div>
-
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Aviatours Australia. All rights reserved.</p>
-        <p>Designed with ❤️ by the Aviatours Web Team.</p>
+        <p>
+          &copy; {new Date().getFullYear()} Aviatours Australia. All rights reserved.
+        </p>
+        <p>
+          Developed By: <a href="https://freelancerpro.in/" target="_blank" rel="noopener noreferrer">FreelancerPro (INDIA)</a>
+        </p>
       </div>
     </footer>
   );

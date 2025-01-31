@@ -20,7 +20,8 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
+  margin: 10px auto;
+  /* padding-top:1 ; */
 }
 .tour-card:hover {
   transform: translateY(-10px);
@@ -53,14 +54,16 @@ body.dark-mode .book-now-btn:hover {
   top: -50px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 20px;
+  /* font-weight: bold; */
   color: #ffffff;
-  text-align: center;
+  /* text-align: center; */
+
   z-index: 2;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   max-width: 100%;
   font-family: cursive;
+  
 }
 
 /* Tour Image Styling */
@@ -295,9 +298,7 @@ iframe {
     max-width: 500px; /* Adjust card width for desktop */
   }
 
-  .tour-details {
-    padding: 20px;
-  }
+  
 
   .tour-name {
     font-size: 1.5rem;
@@ -310,7 +311,7 @@ iframe {
   .tour-price {
     font-size: 1.2rem;
   }
-
+  
   .book-now-btn {
     font-size: 1.1rem;
   }
@@ -370,11 +371,11 @@ body.dark-mode .tour-price span {
 
 /* Dark Mode Adjustments for the price */
 body.dark-mode .tour-price {
-  color: #fa8500; /* Ensure price number stays orange in dark mode */
+  color: #b07b3d; /* Ensure price number stays orange in dark mode */
 }
 
 body.dark-mode .tour-price span {
-  color: #000000; /* The "Price :" label should be white in dark mode */
+  color: #ffffff; /* The "Price :" label should be white in dark mode */
 }
 
 
@@ -401,6 +402,8 @@ body.dark-mode .tour-name,
 body.dark-mode .tour-description,
 body.dark-mode .tour-price {
   color: white; /* White text color for all text elements */
+  /* color: rgb(255, 132, 0);  this color is not matching*/
+
 }
 
 /* Map Container in Dark Mode */
@@ -456,4 +459,42 @@ body.dark-mode .booking-form-container select {
 
 body.dark-mode .close-form-btn {
   color: white; /* Close button color */
+}
+/* Media Query for Desktop */
+@media (min-width: 768px) {
+  .tour-name {
+    font-size: 1.2rem; /* Larger font size for desktop */
+    /* color: red; Set the color to red */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Star Rating Styles */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.filled-star {
+  color: #ffd700; /* Gold for filled stars */
+  font-size: 1.2rem;
+  margin: 0 2px;
+}
+
+.empty-star {
+  color: #ddd; /* Light gray for empty stars */
+  font-size: 1.2rem;
+  margin: 0 2px;
 }

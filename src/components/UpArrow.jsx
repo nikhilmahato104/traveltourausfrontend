@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons"; // Import the icon
 import "./UpArrow.css";
 
 const UpArrow = () => {
@@ -31,7 +33,7 @@ const UpArrow = () => {
     <div>
       {isVisible && (
         <button className="up-arrow-btn fade-in" onClick={scrollToTop}>
-          ↑
+          <FontAwesomeIcon icon={faChevronUp} /> {/* FontAwesomeIcon */}
         </button>
       )}
     </div>
