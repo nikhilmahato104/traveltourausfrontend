@@ -1,13 +1,22 @@
 /* General Footer Styles */
 .footer {
   background-color: var(--footer-bg);
-  color: var(--footer-text);
+  /* background-color: rgb(13, 13, 13); */
+  /* color: var(--footer-text); */
+  /* color: white; */
+  /* set backgound image */
+  background-image: url('../assets/lens1.png');
+  background-size:cover;
+  /* background-Attachment: "fixed"; */
+  background-attachment: fixed;
+  /* position: fixed; */
   padding: 2rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 2rem;
   font-family: sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .footer-section {
