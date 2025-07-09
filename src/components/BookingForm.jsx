@@ -1,6 +1,6 @@
 // import React, { useState } from "react";
 // import "./BookingForm.css"; // Include the CSS file for styling
-
+//navneet
 // const BookingForm = ({ onClose, tourName }) => {
 //   const [formData, setFormData] = useState({
 //     name: "",
