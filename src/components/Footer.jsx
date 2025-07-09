@@ -9,6 +9,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import "./Footer.css";
+import lens1 from "../assets/lens1.png";
 
 const Footer = () => {
   return (
@@ -17,11 +18,38 @@ const Footer = () => {
       <div className="footer-section about-us" id="about-us">
         <h2>About Us</h2>
         <p className="large-text">
-          Aviatours, Australia is your trusted partner for exploring Australia's beauty—from the rugged Outback to the pristine coastline. We offer exceptional tour packages, reliable hotel bookings, and seamless travel services.
-          <br /><br />
-          Whether you're seeking an adventurous getaway, a relaxing retreat, or a family holiday, Aviatours ensures every journey is tailored to your needs. Discover the Great Barrier Reef, experience the vibrant culture of Sydney, or unwind in the serene landscapes of Tasmania.
-          <br /><br />
-          With a commitment to excellence, personalized customer support, and a deep passion for travel, we bring your dream vacations to life. Let Aviatours, Australia guide you on an unforgettable journey through the Land Down Under!
+          Aviatours, Australia, is your dedicated travel partner, ensuring your
+          journey through Australia is seamless and unforgettable. From the
+          rugged Outback to pristine coastlines, we offer a wide range of tour
+          packages, reliable hotel bookings, and personalized itineraries that
+          cater to every type of traveler. Whether you're seeking adventure,
+          relaxation, or family-friendly holidays, we craft the perfect travel
+          experiences for you. Discover iconic destinations like the Great
+          Barrier Reef, Sydney's vibrant culture, or the serene landscapes of
+          Tasmania. Our tour packages span from thrilling wildlife safaris and
+          scenic hikes to luxurious beach escapes. With flexible itineraries, we
+          tailor each trip to meet your interests, ensuring a truly memorable
+          experience. Aviatours specializes in offering guided tours, so you can
+          explore Australia's most renowned landmarks, including the Great
+          Barrier Reef. Snorkel, dive, or take a boat tour to view the stunning
+          marine life and coral reefs, or enjoy an underwater observatory
+          experience. If you prefer city life, Sydney and Melbourne offer
+          world-class dining, shopping, and cultural experiences, from the
+          iconic Sydney Opera House to Melbourne’s vibrant laneways. For those
+          seeking peace and solitude, Tasmania provides the perfect escape with
+          its lush forests, rugged mountains, and beautiful beaches. Our tours
+          offer opportunities to explore Tasmania’s natural beauty, visit
+          wineries, and encounter local wildlife. At Aviatours, we pride
+          ourselves on delivering exceptional customer service. Our 24/7 support
+          is available to assist with any changes or requests, ensuring your
+          trip is stress-free from start to finish. We also work with trusted
+          hotels to ensure your accommodation is comfortable and convenient.
+          What sets us apart is our passion for Australia and dedication to
+          providing authentic travel experiences. We don’t just sell vacations;
+          we bring your dream Australian adventure to life. With attention to
+          detail, expert knowledge, and a commitment to excellence, we ensure
+          you experience the best of Australia, tailored to your needs. Let
+          Aviatours, Australia, be your guide to a truly unforgettable vacation!
         </p>
       </div>
 
@@ -78,10 +106,18 @@ const Footer = () => {
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Aviatours Australia. All rights reserved.
+          &copy; {new Date().getFullYear()} Aviatours Australia. All rights
+          reserved.
         </p>
         <p>
-          Developed By: <a href="https://freelancerpro.in/" target="_blank" rel="noopener noreferrer">FreelancerPro (INDIA)</a>
+          Developed By:{" "}
+          <a
+            href="https://freelancerpro.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FreelancerPro (INDIA)
+          </a>
         </p>
       </div>
     </footer>
